@@ -2,10 +2,10 @@
   "name": "xishi-backend",
   "version": "1.0.0",
   "description": "心事信箱后端服务",
-  "main": "src/server.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node src/server.js",
-    "seed": "node src/seed.js",
+    "start": "node server.js",
+    "seed": "node seed.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
