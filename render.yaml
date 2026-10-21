@@ -1,0 +1,19 @@
+# Render 部署蓝图：https://render.com
+# 用法：把本文件与 package.json 放在 GitHub 仓库根目录，
+# 在 Render 控制台选择 "New → Blueprint"，选择该仓库即可自动部署。
+services:
+  - type: web
+    name: xishi-backend
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DB_PATH
+        value: /tmp/xishi.db
